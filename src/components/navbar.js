@@ -16,10 +16,10 @@ export default function SimpleBottomNavigation() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (value == 0) navigate("/");
-    else if (value == 1) navigate("/movies");
-    else if (value == 2) navigate("/series");
-    else if (value == 3) navigate("/search");
+    if (value === 0) navigate("/");
+    else if (value === 1) navigate("/movies");
+    else if (value === 2) navigate("/series");
+    else if (value === 3) navigate("/search");
   }, [value, navigate]);
 
   return (
@@ -28,7 +28,9 @@ export default function SimpleBottomNavigation() {
         width: "100%",
         position: "fixed",
         bottom: 0,
-        bgcolor: "#2d313a",
+        bgcolor: "primary.main",
+        color: "primary.contrastText",
+        // bgcolor: "#2d313a",
         zIndex: 100,
       }}
     >
